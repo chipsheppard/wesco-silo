@@ -1,0 +1,37 @@
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+
+@mixin breakpoint($point) {
+
+  @if $point == desktop-s {
+    @media all and (max-width: 1250px) { @content; }
+  }
+  @if $point == tablet-h {
+    @media all and (max-width: 1025px) { @content; }
+  }
+  @if $point == tablet-l {
+    @media all and (max-width: 801px) { @content; }
+  }
+  @if $point == tablet-v {
+    @media all and (max-width: 770px) { @content; }
+  }
+  @if $point == phone-h {
+    @media all and (max-width: 500px) { @content; }
+  }
+  @if $point == phone-v {
+    @media all and (max-width: 340px) { @content; }
+  }
+}

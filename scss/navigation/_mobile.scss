@@ -1,0 +1,89 @@
+/*
+
+## Mobile Navigation
+--------------------------------------------------------------- */
+
+@include breakpoint(tablet-v) {
+	.main-navigation {
+		clear: both;
+
+		nav {
+			display: none;
+			//overflow: hidden;
+			//height: 1px;
+			//transition: height 200ms ease-in;
+			padding-top: 1em;
+		}
+
+		&.toggled nav {
+			display: block;
+			//height: 250px;
+		}
+
+		ul {
+			display: block;
+			float: none;
+			margin-left: 0;
+		}
+
+		li {
+			display: block;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		a {
+			width: 100%;
+			padding: .75em 0;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+
+			&:before {
+				content:'';
+				border-bottom: 1px solid $color__highlight-ldark;
+				position:absolute;
+				height:90%;
+				width:100%;
+				left:0;
+				top:0;
+				transform:translate3d(-101%,0,0);
+				transition:transform 0.4s;
+			}
+
+			&:hover {
+				&:before {
+					transform:translate3d(0,0,0);
+				}
+			}
+		}
+
+		.sub-menu {
+			background: transparent;
+			border-top: 0;
+			left: auto;
+			opacity: 1;
+			position: static;
+			width: 100%;
+
+			a {
+				border: 0;
+				color: #fff;
+				line-height: 1.25;
+				padding: .75em 1.125em;
+				width: 100%;
+
+				&:hover {
+					background-color: transparent;
+				}
+			}
+
+			ul {
+				margin: 0;
+				padding-left: 1.125em;
+			}
+		}
+	}
+}

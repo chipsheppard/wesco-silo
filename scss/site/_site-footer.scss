@@ -1,0 +1,32 @@
+/*
+
+## Site Footer
+--------------------------------------------------------------- */
+
+.site-footer {
+	background-color: $color__highlight-xdark;
+	clear: both;
+	color: #fff;
+	padding: .5em 0;
+	width: 100%;
+}
+
+.site-info {
+	@include font-size(.875);
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: $color__base-xxlight;
+		}
+	}
+
+	@include breakpoint(tablet-v) {
+		@include font-size(1);
+	}
+}
+
+.site-footer-links {
+	float: right;
+}

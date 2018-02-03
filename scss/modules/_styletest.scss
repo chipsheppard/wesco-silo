@@ -1,0 +1,63 @@
+/*
+
+## StyleTest
+--------------------------------------------------------------- */
+
+.colors {
+	color: #fff;
+	width: 90%;
+	margin: .5em 0;
+
+	td {
+		padding: 6px 8px;
+	}
+}
+
+.base {
+	background-color:$color__base;
+}
+
+.base-med {
+	background-color:$color__base-med;
+}
+.base-xmed {
+	background-color:$color__base-xmed;
+	color: #000;
+}
+
+.base-light {
+	background-color:$color__base-light;
+}
+.base-xlight {
+	background-color:$color__base-xlight;
+	color: #000;
+}
+.base-xxlight {
+	background-color:$color__base-xxlight;
+	color: #000;
+}
+.base-xxxlight {
+	background-color:$color__base-xxxlight;
+	color: #000;
+}
+
+.highlight {
+	background-color:$color__highlight;
+}
+.highlight-dark {
+	background-color:$color__highlight-dark;
+}
+.highlight-xdark {
+	background-color: $color__highlight-xdark;
+}
+
+.highlight-light {
+	background-color:$color__highlight-light;
+}
+.highlight-light-desat {
+	background-color:$color__highlight-light-desat;
+}
+
+.altlight {
+	background-color:$color__altlight;
+}

@@ -1,0 +1,92 @@
+/*
+
+## Sidebar Widgets
+--------------------------------------------------------------- */
+
+.sidebar-widget {
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+
+	@include breakpoint(tablet-v) {
+		margin-bottom: 0;
+	}
+
+	.widget-title {
+		margin: 0 0 .75em;
+		border-bottom: 1px solid $color__base-xlight;
+	}
+
+	select {
+		max-width: 100%;
+	}
+
+	ul {
+
+		li {
+			line-height: 1.2em;
+			margin-bottom: .75em;
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	.menu {
+
+		a {
+			color: $color__base-med;
+			font-weight: 600;
+			padding: 1.125em 0;
+			text-transform: uppercase;
+			@include font-size(1.125);
+
+			&:hover {
+				color: $color__highlight;
+			}
+		}
+
+		li {
+			border-bottom: 1px solid $color__base-xlight;
+			margin-bottom: 0;
+
+
+			li {
+				border: none;
+
+				a {
+					padding: .5em 0 .5em 1.5em;
+				}
+
+				li {
+					a {
+						padding-left:3em;
+					}
+				}
+			}
+		}
+
+		ul {
+			display: none;
+			padding-bottom: .75em;
+
+			ul {
+				padding-bottom: .125em;
+			}
+		}
+
+		li.current-menu-item ul,
+		li.current-menu-ancestor ul {
+			display: block;
+		}
+
+		li.current-menu-item > a {
+			font-weight: 700;
+		}
+	}
+
+	.menu-item-has-children.current-menu-item > a,
+	.menu-item-has-children.current-menu-ancestor > a{
+		padding-bottom: .5em;
+	}
+}

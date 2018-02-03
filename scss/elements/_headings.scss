@@ -1,0 +1,51 @@
+/*
+
+## Headings
+------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headers;
+	font-weight: $font__weight-bold;
+	line-height: 1.25;
+	margin: 0 0 .5em 0;
+
+	a,
+	a:visited,
+	a:focus,
+	a:active {
+		color: $color__highlight;
+		width: 100%;
+
+		&:hover {
+			color: $color__base;
+		}
+	}
+}
+
+h1 {
+	color: $color__highlight-dark;
+	font-weight: 800;
+}
+h1, h2, h3 {
+	color: $color__highlight-dark;
+}
+h4, h5, h6 {
+	color: $color__base-med;
+}
+
+h1 {@include font-size(3.5);}   //56px
+h2 {@include font-size(1.75);}  //40px
+h3 {@include font-size(1.5);}   //24px
+h4 {@include font-size(1.375);} //22px
+h5 {@include font-size(1.125);} //18px
+h6 {@include font-size(1);}     //16px
+
+@include breakpoint(phone-h) {
+	h1 {@include font-size(1.75);}
+	h2 {@include font-size(1.5);}
+	h3 {@include font-size(1.25);}
+}
+
+@include breakpoint(phone-v) {
+	h1 {@include font-size(1.25);}
+}

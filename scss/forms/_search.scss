@@ -1,0 +1,31 @@
+/*
+
+## Search Form
+--------------------------------------------------------------- */
+
+.search-form {
+	position: relative;
+	input[type="submit"] {
+	background: transparent;
+	border: none;
+	color: $color__base;
+	display: inline-block;
+	padding: 0;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	z-index: 2;
+	font-family: $font__icon;
+	-webkit-font-smoothing: antialiased;
+	@include font-size(1.5);
+
+	&:hover,
+	&:focus {
+			color: $color__highlight;
+		}
+	}
+}
+
+.entry-content .search-form {
+	width: 50%;
+}

@@ -1,0 +1,61 @@
+/*
+
+## Site Header
+--------------------------------------------------------------- */
+
+.site-header {
+	background-color: $color__highlight-dark;
+	padding: 1em 0;
+	position: relative;
+	width: 100%;
+}
+
+.site-branding {
+	float:left;
+	margin-right: 4em;
+
+	@include breakpoint(tablet-v) {
+		margin-right: 0;
+	}
+
+	.header-image {
+		width: 210px;
+		padding-top: .5em;
+
+		@include breakpoint(tablet-v) {
+			padding-top: 0;
+		}
+
+		img {
+			display: block;
+		}
+	}
+}
+
+
+.site-title {
+	font-weight: 800;
+	margin: 0;
+	line-height: 1;
+	@include font-size(2.5);
+
+	a {
+		color:#fff;
+		line-height: 1;
+		text-decoration: none;
+		display:inline-block;
+
+		&:hover {
+			color: $color__altlight;
+		}
+	}
+
+	@include breakpoint(phone-v) {
+		@include font-size(1.75);
+	}
+}
+
+.site-description {
+	color:#fff;
+	margin: .25em 0 0 0;
+}

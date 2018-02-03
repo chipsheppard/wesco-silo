@@ -1,0 +1,135 @@
+/*
+
+## Footer Widgets
+--------------------------------------------------------------- */
+
+.footer-widgets {
+	background-color: $color__highlight-dark;
+	clear: both;
+	color: #fff;
+	padding: 2em 0 0 0;
+	width: 100%;
+
+	.widget-area-1 {
+		float: left;
+		width: $size__site-sidebar;
+	}
+
+	.widget-area-2 {
+		float: left;
+		padding-left: 6%;
+		width: 36%;
+	}
+
+	.widget-area-3 {
+		float: right;
+		width: 300px;
+
+		.footer-widget {
+			float: left;
+			width: 150px;
+			padding-left: 30px;
+
+			&:first-child {
+				border-right: 1px solid #fff;
+				padding-right: 30px;
+				padding-left: 0;
+			}
+
+			@include breakpoint(phone-v) {
+				float: none;
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+
+	@include breakpoint(tablet-v) {
+		.widget-area-1,
+		.widget-area-2,
+		.widget-area-3 {
+			display: block;
+			float: none;
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
+
+.footer-widget {
+	margin-bottom: 40px;
+	@include font-size(.875);
+
+	a {
+		display: inline-block;
+		color: #fff;
+
+		&:hover {
+			color: $color__base-xlight;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+
+		li {
+			padding: 0 0 .5em 0;
+
+			&.dashicons {
+				display: block;
+				width: 100%;
+				text-align: left;
+				padding: 0;
+				margin-bottom: .5em;
+
+				a {
+					display: inline;
+					font-family: $font__main;
+					line-height: 1;
+					@include font-size(1);
+				}
+			}
+
+			&:before {
+				vertical-align: middle;
+				margin-right: .25em;
+			}
+
+			&.linkedin:before {
+				content: 'in';
+				font-family: $font__main;
+				font-weight: 700;
+				position: relative;
+				top: -3px;
+				margin-left: 1px;
+				margin-right: .375em;
+				@include font-size(1.125);
+			}
+		}
+	}
+
+	.widget-title {
+		color: #fff;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	@include breakpoint(tablet-v) {
+		margin-bottom: 32px;
+	}
+}
+
+.footer-logo-tag {
+	font-family: $font__serif;
+	-webkit-font-smoothing: antialiased;
+	@include font-size(1.5);
+
+	@include breakpoint(tablet-h) {
+		@include font-size(1.125);
+	}
+	@include breakpoint(tablet-v) {
+		@include font-size(1.5);
+	}
+}

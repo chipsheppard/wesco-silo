@@ -1,0 +1,76 @@
+/*
+
+## Containers
+--------------------------------------------------------------- */
+
+.site-content {
+	position: relative;
+	clear: both;
+	@include font-size(1.125);
+}
+
+.site-main {
+	float: none;
+	width: 100%;
+}
+
+// THE CONTAINER --------------------------------
+.inner-wrap {
+	width: 100%;
+	max-width: $size__site-max;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 4%;
+}
+
+// Full Width (default) -----------------------------------
+.content-area {
+	float: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
+}
+
+// Sidebar layouts ------------------------------
+.site-content .widget-area {
+	display: inline-block;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+// Sidebar Content --------------------
+.sidebar-left .content-area {
+	float: right;
+	margin-bottom: 1.5em;
+	width: $size__site-content;
+}
+.sidebar-left .site-content .widget-area {
+	float: left;
+	margin-bottom: 1.5em;
+}
+
+// Content Sidebar ------------------------------
+.sidebar-right .content-area {
+	float: left;
+	width: $size__site-content;
+}
+.sidebar-right .site-content .widget-area {
+	float: right;
+}
+
+@include breakpoint(tablet-v) {
+	.content-area,
+	.site-main,
+	.site-content .widget-area,
+	.sidebar-right .content-area,
+	.sidebar-right .site-main,
+	.sidebar-right .site-content .widget-area,
+	.sidebar-left .content-area,
+	.sidebar-left .site-main,
+	.sidebar-left .site-content .widget-area {
+		display:block;
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+}

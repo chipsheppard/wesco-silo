@@ -1,0 +1,22 @@
+/*
+
+## Pagination
+--------------------------------------------------------------- */
+
+.pagination a,
+.pagination .current {
+	background-color:#777;
+	border-radius:3px;
+	color:#ffffff;
+	cursor:pointer;
+	display:inline-block;
+	margin:0.25em 0;
+	padding:6px 12px;
+	text-decoration:none;
+}
+
+.pagination .current,
+.pagination a:hover,
+.pagination a.current {
+	background-color: #000;
+}

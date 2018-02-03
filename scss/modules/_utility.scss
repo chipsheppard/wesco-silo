@@ -1,0 +1,35 @@
+/*
+
+## Utility
+--------------------------------------------------------------- */
+
+@media only screen and (min-width:1024px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+@include breakpoint(tablet-h) {
+	.desktop-only {
+		display: none;
+	}
+}
+
+.ta-center {
+	text-align: center;
+}
+.ta-right {
+	text-align: right;
+}
+
+.intro {
+	margin-bottom: 1.25em;
+	@include font-size(1.375);
+}
+.graybox {
+	padding:16px 24px 1px;
+	background: $color__base-xxxlight;
+	border:1px solid $color__base-xmed;
+	margin-bottom:24px;
+	@include font-size(.875);
+}
