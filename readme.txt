@@ -24,10 +24,11 @@ Based on Underscores ( _s ) by Automatic, the keepers of WordPress.
 
 == Changelog ==
 
-= 0.1 - Feb 02 2018 =
+= 1.0 - Feb 02 2018 =
 * Translation ready - .pot file added
+* First commit to GitHub
 
-= 0.0 - Jan 20 2018 =
+= 0.1 - Jan 20 2018 =
 * Complete customization of _s
 * Renamed _s to "Wesco Silo"
 
